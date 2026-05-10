@@ -26,10 +26,10 @@ A desktop **JavaFX** app that builds **Chinese surnames + two-character given na
 
 ## Running
 
-Run Maven from the directory that contains **`pom.xml`** (in this repo, `ChineseNamev1/`):
+Clone or open this repository, then run Maven from the **repository root** (the folder that contains `pom.xml`, e.g. `ChineseNameGenerator/`):
 
 ```bash
-cd ChineseNamev1
+cd ChineseNameGenerator   # or whatever you named the clone
 
 mvn test
 mvn javafx:run
@@ -68,8 +68,8 @@ src/main/resources/
 └── schema.sql                # SQLite DDL
 
 docs/
-├── ETL_SCHEMA.md
-└── DATA_SOURCES.md
+├── etl-schema.md      # SQLite columns and ETL mapping notes
+└── data-sources.md    # Attribution and suggested external datasets
 ```
 
 ---
@@ -114,7 +114,7 @@ English input is normalized, segmented, and mapped to pinyin-like tokens. When a
 ## Data and ETL
 
 - On startup, `EtlImporter` reads **`sample_characters.json`** and upserts into `character_entry`.
-- Field conventions are documented in `docs/ETL_SCHEMA.md`.
+- Field conventions are documented in `docs/etl-schema.md`.
 - For larger or replacement datasets, keep the JSON → Jackson → `CharacterRepository` path; respect licenses and attribution (see below).
 
 ### Suggested open datasets (bring your own import)
@@ -129,13 +129,7 @@ English input is normalized, segmented, and mapped to pinyin-like tokens. When a
 ## FAQ
 
 - **Maven says there is no POM?**  
-  Run commands inside `ChineseNamev1`, not the parent `ChineseName` folder (which has no `pom.xml`).
+  `cd` into this project’s root—the same directory as **`pom.xml`**—not a parent folder above it.
 
 - **Reset the database?**  
   Delete `chinesename.db` in the working directory and restart the app to re-import the sample JSON.
-
----
-
-## License
-
-Follow your course or department policy for submissions. If you open-source the project separately, add an explicit LICENSE and credit any datasets beyond `sample_characters.json`.
