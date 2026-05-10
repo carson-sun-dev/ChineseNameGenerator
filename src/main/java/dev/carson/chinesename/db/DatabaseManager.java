@@ -1,4 +1,4 @@
-package edu.cs6103.chinesename.db;
+package dev.carson.chinesename.db;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

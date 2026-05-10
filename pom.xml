@@ -2,8 +2,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>edu.cs6103</groupId>
-    <artifactId>chinese-name-v1</artifactId>
+    <groupId>dev.carson</groupId>
+    <artifactId>chinese-name-generator</artifactId>
     <version>0.1.0</version>
 
     <properties>
@@ -60,7 +60,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>edu.cs6103.chinesename.ui.MainApp</mainClass>
+                    <mainClass>dev.carson.chinesename.ui.MainApp</mainClass>
                 </configuration>
             </plugin>
             <plugin>

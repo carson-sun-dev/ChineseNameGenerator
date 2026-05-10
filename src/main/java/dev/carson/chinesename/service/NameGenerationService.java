@@ -1,7 +1,7 @@
-package edu.cs6103.chinesename.service;
+package dev.carson.chinesename.service;
 
-import edu.cs6103.chinesename.model.CharacterEntry;
-import edu.cs6103.chinesename.model.NameCandidate;
+import dev.carson.chinesename.model.CharacterEntry;
+import dev.carson.chinesename.model.NameCandidate;
 
 import java.util.ArrayList;
 import java.util.Comparator;

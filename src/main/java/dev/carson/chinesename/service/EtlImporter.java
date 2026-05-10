@@ -1,9 +1,9 @@
-package edu.cs6103.chinesename.service;
+package dev.carson.chinesename.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.cs6103.chinesename.db.CharacterRepository;
-import edu.cs6103.chinesename.model.CharacterEntry;
+import dev.carson.chinesename.db.CharacterRepository;
+import dev.carson.chinesename.model.CharacterEntry;
 
 import java.io.InputStream;
 import java.util.List;

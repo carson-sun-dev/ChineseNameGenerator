@@ -1,4 +1,4 @@
-package edu.cs6103.chinesename.model;
+package dev.carson.chinesename.model;
 
 public record NameCandidate(
         String surname,

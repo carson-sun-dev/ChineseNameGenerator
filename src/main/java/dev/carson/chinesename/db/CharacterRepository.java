@@ -1,6 +1,6 @@
-package edu.cs6103.chinesename.db;
+package dev.carson.chinesename.db;
 
-import edu.cs6103.chinesename.model.CharacterEntry;
+import dev.carson.chinesename.model.CharacterEntry;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

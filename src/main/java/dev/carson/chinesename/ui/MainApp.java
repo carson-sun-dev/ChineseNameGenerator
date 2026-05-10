@@ -1,11 +1,11 @@
-package edu.cs6103.chinesename.ui;
+package dev.carson.chinesename.ui;
 
-import edu.cs6103.chinesename.db.CharacterRepository;
-import edu.cs6103.chinesename.db.DatabaseManager;
-import edu.cs6103.chinesename.model.NameCandidate;
-import edu.cs6103.chinesename.service.EtlImporter;
-import edu.cs6103.chinesename.service.NameGenerationService;
-import edu.cs6103.chinesename.service.PhoneticMapper;
+import dev.carson.chinesename.db.CharacterRepository;
+import dev.carson.chinesename.db.DatabaseManager;
+import dev.carson.chinesename.model.NameCandidate;
+import dev.carson.chinesename.service.EtlImporter;
+import dev.carson.chinesename.service.NameGenerationService;
+import dev.carson.chinesename.service.PhoneticMapper;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -134,7 +134,7 @@ public class MainApp extends Application {
         root.setCenter(resultScroll);
         BorderPane.setMargin(resultScroll, new Insets(12));
 
-        stage.setTitle("ChineseNamev1");
+        stage.setTitle("Chinese Name Generator");
         stage.setScene(new Scene(root, 900, 500));
         stage.show();
     }

@@ -1,4 +1,4 @@
-package edu.cs6103.chinesename.service;
+package dev.carson.chinesename.service;
 
 import java.util.ArrayList;
 import java.util.List;

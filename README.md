@@ -1,4 +1,4 @@
-# ChineseName v1
+# Chinese Name Generator
 
 A desktop **JavaFX** app that builds **Chinese surnames + two-character given names** from English pronunciation and style preferences, then ranks candidates by an internal score. Suitable for coursework or prototyping.
 
@@ -35,22 +35,41 @@ mvn test
 mvn javafx:run
 ```
 
-Main class: `edu.cs6103.chinesename.ui.MainApp`.
+**Main class:** `dev.carson.chinesename.ui.MainApp`
+
+**Maven coordinates:** `dev.carson:chinese-name-generator`
 
 ---
 
 ## Project layout
 
+Java sources live under a short package prefix, **`dev.carson.chinesename`**, instead of a long course-style path.
+
+### Packages
+
+| Package | What lives here |
+|---------|------------------|
+| **`…ui`** | `MainApp` — JavaFX entry point |
+| **`…service`** | Name generation, `PhoneticMapper`, `ScoringModel`, pronunciation hints, `EtlImporter` |
+| **`…db`** | `DatabaseManager`, `CharacterRepository` (SQLite) |
+| **`…model`** | `CharacterEntry`, `NameCandidate` |
+
+### Folders (quick tree)
+
 ```
-src/main/java/edu/cs6103/chinesename/
-  ui/           MainApp — JavaFX UI
-  service/      Generation, phonetic mapping, scoring, pronunciation hints, ETL
-  db/           SQLite and character repository
-  model/        CharacterEntry, NameCandidate
+src/main/java/dev/carson/chinesename/
+├── ui/
+├── service/
+├── db/
+└── model/
+
 src/main/resources/
-  sample_characters.json   Sample character data
-  schema.sql               Table definitions
-docs/                      ETL notes and data-source docs
+├── sample_characters.json    # seed data for ETL
+└── schema.sql                # SQLite DDL
+
+docs/
+├── ETL_SCHEMA.md
+└── DATA_SOURCES.md
 ```
 
 ---
@@ -114,3 +133,9 @@ English input is normalized, segmented, and mapped to pinyin-like tokens. When a
 
 - **Reset the database?**  
   Delete `chinesename.db` in the working directory and restart the app to re-import the sample JSON.
+
+---
+
+## License
+
+Follow your course or department policy for submissions. If you open-source the project separately, add an explicit LICENSE and credit any datasets beyond `sample_characters.json`.

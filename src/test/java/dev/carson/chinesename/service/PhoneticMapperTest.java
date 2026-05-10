@@ -1,4 +1,4 @@
-package edu.cs6103.chinesename.service;
+package dev.carson.chinesename.service;
 
 import org.junit.jupiter.api.Test;
 
